@@ -1,0 +1,24 @@
+{
+  "author": "Richard Marr <richard.marr@gmail.com>",
+  "name": "resourceful-elasticsearch",
+  "description": "Elasticsearch engine module for Resourceful ODM",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/richmarr/resourceful-elasticsearch.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "vows --spec -i"
+  },
+  "engines": {
+    "node": "~0.4.7"
+  },
+  "dependencies":{
+    "elastical":"0.0.3",
+    "resourceful":"0.1.5"
+  },
+  "devDependencies": {
+    "vows": "~0.6.0"
+  }
+}
