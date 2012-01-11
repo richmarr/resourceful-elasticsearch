@@ -1,4 +1,4 @@
-# resourceful-elasticsearch
+# resourceful-elasticsearch [![Build Status](https://secure.travis-ci.org/richmarr/resourceful-elasticsearch.png)](http://travis-ci.org/richmarr/resourceful-elasticsearch)
 
 A pluggable engine for [Flatiron][2]'s [Resourceful][3] ODM layer that exposes [Elasticsearch][4] via [node-elastical][5]. 
 
