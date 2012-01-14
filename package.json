@@ -16,7 +16,7 @@
   },
   "dependencies":{
     "elastical":"0.0.7",
-    "resourceful":"0.1.5"
+    "resourceful":"0.1.6"
   },
   "devDependencies": {
     "vows": "~0.6.0"
