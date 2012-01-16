@@ -23,13 +23,11 @@ vows.describe('Parameter parsing').addBatch({
 		"Query definition only":{
 			topic: function () {
 				return esEngine.generateQuery({
-					term:{
-						terms:"fox"
-					}
+					foo:"bar"
 				});
 			},
 			"should result in a term query":function( obj ){
-				assert.equal( obj.query.term.terms, "fox" );
+				assert.equal( obj.query.term.foo, "bar" );
 			}
 		},
 		"Full ES query object":{
@@ -37,7 +35,7 @@ vows.describe('Parameter parsing').addBatch({
 				return esEngine.generateQuery({
 					query:{
 						term:{
-							terms:"fox"
+							foo:"bar"
 						}
 					},
 					filter:{
@@ -46,7 +44,7 @@ vows.describe('Parameter parsing').addBatch({
 				});
 			},
 			"should contain a term query":function( obj ){
-				assert.equal( obj.query.term.terms, "fox" );
+				assert.equal( obj.query.term.foo, "bar" );
 			},
 			"should still contain its filter":function( obj ){
 				assert.equal( obj.filter.term.foo, "bar" );
