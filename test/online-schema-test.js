@@ -45,28 +45,27 @@ vows.describe('Schema').addBatch({
 				});
 			});
 		},
-		"persisted without error": function(){},
-		"mapping file":{
+		"is persisted without error": function(){},
+		"is returned ":{
 			topic:function(){
 				client.getMapping( testIndexName, 'Author', this.callback );
 			},
-			"is returned without error":function( err, mapping ){
+			"without error":function( err, mapping ){
 				assert.isObject(mapping.Author);
 				assert.isObject(mapping.Author.properties);
 			},
-			"contains correct types":function( err, mapping ){
+			"with correct types":function( err, mapping ){
 				var props = mapping.Author.properties;
 				assert.equal(props.born.type,'integer');
 				assert.equal(props.name.type,'string');
 				assert.equal(props.bio.type,'string');
 				assert.equal(props.secret.type,'string');
 			},
-			"contains":function( err, mapping ){
+			"with additional mapping config":function( err, mapping ){
 				var props = mapping.Author.properties;
-				assert.equal(props.born.type,'integer');
-				assert.equal(props.name.type,'string');
-				assert.equal(props.bio.type,'string');
-				assert.equal(props.secret.type,'string');
+				assert.equal(props.name.analyzer,'simple');
+				assert.equal(props.bio.analyzer,'snowball');
+				assert.equal(props.secret.index,'no');
 			}
 		}
 	}
