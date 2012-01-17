@@ -1,9 +1,7 @@
 var assert = require('assert'),
-	events = require('events'),
 	vows = require('vows'),
 	resourceful = require('resourceful'),
-	esEngine = require('../index'),
-	Elasticsearch = esEngine.Elasticsearch;
+	esEngine = require('../index');
 
 resourceful.env = 'test';
 resourceful.use('elasticsearch',{index:'resourceful-test'});
