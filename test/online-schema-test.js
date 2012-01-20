@@ -56,12 +56,13 @@ vows.describe('Schema').addBatch({
 			},
 			"with correct types":function( err, mapping ){
 				var props = mapping.Author.properties;
-				assert.equal(props.born.type,'integer');
+				assert.equal(props.born.type,'long');
 				assert.equal(props.name.type,'string');
 				assert.equal(props.bio.type,'string');
 				assert.equal(props.secret.type,'string');
 			},
 			"with additional mapping config":function( err, mapping ){
+				console.error(mapping.Author.properties)
 				var props = mapping.Author.properties;
 				assert.equal(props.name.analyzer,'simple');
 				assert.equal(props.bio.analyzer,'snowball');
