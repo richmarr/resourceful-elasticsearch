@@ -5,7 +5,7 @@ var assert = require('assert'),
 	resourceful = require('resourceful'),
 	Elasticsearch = require('../index').Elasticsearch;
 
-var testIndexName = 'resourceful-easticsearch-test';
+var testIndexName = 'resourceful-elasticsearch-search-test';
 
 resourceful.env = 'test';
 resourceful.use('elasticsearch',{index:testIndexName});
