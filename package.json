@@ -2,7 +2,7 @@
   "author": "Richard Marr <richard.marr@gmail.com>",
   "name": "resourceful-elasticsearch",
   "description": "Elasticsearch engine module for Resourceful ODM",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "repository": {
     "type": "git",
     "url": "git://github.com/richmarr/resourceful-elasticsearch.git"
