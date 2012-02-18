@@ -2,6 +2,28 @@
 
 A pluggable engine for [Flatiron][2]'s [Resourceful][3] ODM layer that exposes [Elasticsearch][4] via the [node-elastical][5] module.
 
+Exposes new methods to Resourceful such as `search()` and `terms()` as well as implementing as many of the existing ones as possible.
+
+### Examples
+
+You can use Lucene query syntax to fetch resources:
+
+``` js
+	Creature.search("legs:4",function( err, creatures ){
+		// creatures contains an array of matching records
+	});
+```
+
+You can power autocomplete UI by looking up term frequencies:
+
+
+``` js
+	Creature.terms("description",function( err, term ){
+		// creatures contains an array of matching records
+	});
+```
+
+
 ## Installation
 
 ``` bash
